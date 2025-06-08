@@ -33,3 +33,7 @@ class InviteToGame(ServerPacket):
     game_id: int
     password: str | None = None
     server: str
+
+class Hand(ServerPacket):
+    __packet_key__ = "hand"
+    cards: list[str]
