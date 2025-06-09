@@ -6,7 +6,7 @@ class GetUserInfo(ClientPacket):
     id: int
 
 
-class UsersFinder(ClientPacket):
+class UsersFind(ClientPacket):
     __packet_key__ = "users_find"
     name: str | None = None
 
