@@ -16,7 +16,7 @@ class Captcha(ServerPacket):
 class GetIntegrityToken(ServerPacket):
     __packet_key__ = "get_integrity_token"
     request_hash: str
-
+    rt: Literal["st", "cl"] | None = None
 
 class TokenFCM(ServerPacket):
     __packet_key__ = "token"
