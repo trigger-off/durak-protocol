@@ -73,6 +73,8 @@ class HuaweiAuthSuccess(ServerPacket):
 class DurakGoogleAuthSuccess(ServerPacket):
     __packet_key__ = "durak_google_auth_success"
 
+class DurakGoogleRegisterSuccess(ServerPacket):
+    __packet_key__ = "durak_google_register_success"
 
 class VkAuthSuccess(ServerPacket):
     __packet_key__ = "vk_auth_success"
