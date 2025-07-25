@@ -7,6 +7,9 @@ class Authorized(ServerPacket):
     __packet_key__ = "authorized"
     id: int
 
+class SetToken(ServerPacket):
+    __packet_key__ = "set_token"
+    token: str
 
 class Captcha(ServerPacket):
     __packet_key__ = "captcha"
