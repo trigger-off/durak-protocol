@@ -229,6 +229,10 @@ class Mode(ServerPacket):
     six: int | None = Field(None, alias="5")
 
 
+class GameOver(ServerPacket):
+    __packet_key__ = "game_over"
+    players: list[int] | None = None
+
 class PlayerOn(ServerPacket):
     __packet_key__ = "p_on"
 
@@ -244,16 +248,12 @@ class BtnReadyOff(ServerPacket):
 class BtnReadyOn(ServerPacket):
     __packet_key__ = "btn_ready_on"
 
-
 class GamePublic(ServerPacket):
     __packet_key__ = "game_public"
 
+
 class GameStart(ServerPacket):
     __packet_key__ = "game_start"
-
-
-class GameOver(ServerPacket):
-    __packet_key__ = "game_over"
 
 
 class GameReset(ServerPacket):
