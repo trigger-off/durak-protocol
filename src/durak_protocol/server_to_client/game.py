@@ -157,12 +157,12 @@ class Table(ServerPacket):
 
 class Hands(ServerPacket):
     __packet_key__ = "hands"
-    one: int = Field(..., alias="1")
-    two: int = Field(..., alias="2")
-    three: int = Field(..., alias="3")
-    four: int = Field(..., alias="4")
-    five: int = Field(..., alias="5")
-    six: int = Field(..., alias="6")
+    one: int | None = Field(None, alias="0")
+    two: int | None = Field(None, alias="1")
+    three: int | None = Field(None, alias="2")
+    four: int | None = Field(None, alias="3")
+    five: int | None = Field(None, alias="4")
+    six: int | None = Field(None, alias="5")
 
 
 class Highlight(ServerPacket):
@@ -217,6 +217,16 @@ class ReadyOff(ServerPacket):
 class GameReady(ServerPacket):
     __packet_key__ = "game_ready"
     timeout: int
+
+
+class Mode(ServerPacket):
+    __packet_key__ = "mode"
+    one: int | None = Field(None, alias="0")
+    two: int | None = Field(None, alias="1")
+    three: int | None = Field(None, alias="2")
+    four: int | None = Field(None, alias="3")
+    five: int | None = Field(None, alias="4")
+    six: int | None = Field(None, alias="5")
 
 
 class PlayerOn(ServerPacket):
