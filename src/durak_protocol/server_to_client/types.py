@@ -113,7 +113,7 @@ class Achieve(BaseModel):
 
 
 class Asset(BaseModel):
-    id: int
+    id: str
     index: int
     mask: int
     level: int
