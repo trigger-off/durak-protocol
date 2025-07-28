@@ -1,3 +1,5 @@
+from typing import Literal
+
 from . import ServerPacket, types, Field
 
 
@@ -21,6 +23,13 @@ class TourScore(ServerPacket):
     __packet_key__ = "tour_score"
     one: int | None = Field(None, alias="0")
     two: int | None = Field(None, alias="1")
+
+
+class TourHall(ServerPacket):
+    __packet_key__ = "tour_hall"
+    type: Literal["gold","silver","bronze"]
+    desc: dict
+    items: dict
 
 
 class TourWin(ServerPacket):
