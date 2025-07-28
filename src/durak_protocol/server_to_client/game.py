@@ -39,7 +39,7 @@ class GameStatus(ServerPacket):
     __packet_key__ = "game_status"
     cards: dict[str, int]
     win: dict[str, int] | None = None
-    off: dict[int, int] | None = None
+    off: list[dict] | None = None
 
 
 class Features(ServerPacket):
