@@ -127,7 +127,7 @@ class Asset(BaseModel):
 class CollectionAsset(BaseModel):
     group: ASSET_GROUP_TYPE
     items: dict[str, int]
-    ass: Asset
+    ass: Asset | None = None
 
 class PointsPrice(BaseModel):
     price: int
