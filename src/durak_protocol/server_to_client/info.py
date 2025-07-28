@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Literal
 
-from . import ServerPacket
+from . import ServerPacket, BaseModel
 
 
 class Free(ServerPacket):
@@ -29,3 +29,11 @@ class Message(ServerPacket):
 class FunctionalIsUnavailable(ServerPacket):
     __packet_key__ = "functional_is_unavailable"
     until: datetime | str
+
+class AdInfo(BaseModel):
+    id: str
+    state: bool
+
+class AdNets(ServerPacket):
+    __packet_key__ = "ad_nets"
+    ids: list[AdInfo]
