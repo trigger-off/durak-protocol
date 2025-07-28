@@ -167,10 +167,6 @@ class Hands(ServerPacket):
     six: int = Field(..., alias="6")
 
 
-class Bets(ServerPacket):
-    __packet_key__ = "bets"
-
-
 class Highlight(ServerPacket):
     __packet_key__ = "hl"
     c: list[str] | None = None
