@@ -236,7 +236,7 @@ class GamePublic(ServerPacket):
 
 class GameReady(ServerPacket):
     __packet_key__ = "game_ready"
-
+    timeout: int
 
 class GameStart(ServerPacket):
     __packet_key__ = "game_start"
