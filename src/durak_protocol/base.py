@@ -1,4 +1,5 @@
 from enum import Enum, auto
+# noinspection PyUnresolvedReferences
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from typing import ClassVar, Type, TypeVar, Unpack
 from typing import Self

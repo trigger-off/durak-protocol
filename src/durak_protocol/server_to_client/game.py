@@ -1,5 +1,3 @@
-from typing import Any
-
 from pydantic import ConfigDict
 
 from . import ServerPacket, Field, types
