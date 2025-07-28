@@ -9,26 +9,26 @@ class Achieves(ServerPacket):
 
 class Collection(ServerPacket):
     __packet_key__ = "coll"
-    smile_bear: types.CollectionAsset
-    smile_gnome: types.CollectionAsset
-    smile_lion: types.CollectionAsset
-    smile_robot: types.CollectionAsset
-    smile_unicorn: types.CollectionAsset
-    smile_vampire: types.CollectionAsset
-    smile_boar: types.CollectionAsset
-    smile_bull: types.CollectionAsset
-    smile_dog: types.CollectionAsset
-    smile_dragon: types.CollectionAsset
-    smile_goat: types.CollectionAsset
-    smile_horse: types.CollectionAsset
-    smile_monkey: types.CollectionAsset
-    smile_rabbit: types.CollectionAsset
-    smile_rat: types.CollectionAsset
-    smile_rooster: types.CollectionAsset
-    smile_snake: types.CollectionAsset
-    smile_tiger: types.CollectionAsset
-    shirt_rstyle: types.CollectionAsset
-    shirt_bicycle: types.CollectionAsset
+    smile_bear: types.CollectionAsset | None = None
+    smile_gnome: types.CollectionAsset | None = None
+    smile_lion: types.CollectionAsset | None = None
+    smile_robot: types.CollectionAsset | None = None
+    smile_unicorn: types.CollectionAsset | None = None
+    smile_vampire: types.CollectionAsset | None = None
+    smile_boar: types.CollectionAsset | None = None
+    smile_bull: types.CollectionAsset | None = None
+    smile_dog: types.CollectionAsset | None = None
+    smile_dragon: types.CollectionAsset | None = None
+    smile_goat: types.CollectionAsset | None = None
+    smile_horse: types.CollectionAsset | None = None
+    smile_monkey: types.CollectionAsset | None = None
+    smile_rabbit: types.CollectionAsset | None = None
+    smile_rat: types.CollectionAsset | None = None
+    smile_rooster: types.CollectionAsset | None = None
+    smile_snake: types.CollectionAsset | None = None
+    smile_tiger: types.CollectionAsset | None = None
+    shirt_rstyle: types.CollectionAsset | None = None
+    shirt_bicycle: types.CollectionAsset | None = None
 
 
 class UserCollection(Collection):
