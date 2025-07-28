@@ -8,11 +8,6 @@ class GiftAssets(ServerPacket):
     frame: None | list[types.Asset] = None
 
 
-# user_coll
-class UserCollection(ServerPacket):
-    __packet_key__ = "user_coll"
-
-
 class GiftCollItemSuccess(ServerPacket):
     __packet_key__ = "gift_coll_item_success"
 
