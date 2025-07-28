@@ -214,6 +214,11 @@ class ReadyOff(ServerPacket):
     id: int
 
 
+class GameReady(ServerPacket):
+    __packet_key__ = "game_ready"
+    timeout: int
+
+
 class PlayerOn(ServerPacket):
     __packet_key__ = "p_on"
 
@@ -232,11 +237,6 @@ class BtnReadyOn(ServerPacket):
 
 class GamePublic(ServerPacket):
     __packet_key__ = "game_public"
-
-
-class GameReady(ServerPacket):
-    __packet_key__ = "game_ready"
-
 
 class GameStart(ServerPacket):
     __packet_key__ = "game_start"
