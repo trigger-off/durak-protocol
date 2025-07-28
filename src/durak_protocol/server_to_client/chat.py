@@ -13,8 +13,8 @@ class Message(BaseModel):
     msg: str | None = None
     payload: str | None = None
     dtc: datetime
-    from_: str = Field(..., alias="from")
-    to: str = Field(..., alias="to")
+    from_: int = Field(..., alias="from")
+    to: int = Field(..., alias="to")
 
 
 class DeleteConversationSuccess(ServerPacket):
@@ -39,8 +39,8 @@ class UserMsg(ServerPacket):
     __packet_key__ = "user_msg"
     dtc: datetime
     id: int
-    from_: str = Field(..., alias="from")
-    to: str
+    from_: int = Field(..., alias="from")
+    to: int
     name: str
     avatar: str | None = None
     kind: MessageKind | None = None
