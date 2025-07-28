@@ -104,7 +104,7 @@ class Game(BaseModel):
 
 
 class Achieve(BaseModel):
-    id: int
+    id: str
     index: int
     mask: int
     level: int
