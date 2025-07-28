@@ -115,6 +115,26 @@ class Surrender(ClientPacket):
     __packet_key__ = "surrender"
 
 
+class Ready(ClientPacket):
+    __packet_key__ = "ready"
+
+
+class Pass(ClientPacket):
+    __packet_key__ = "pass"
+
+
+class Done(ClientPacket):
+    __packet_key__ = "done"
+
+
+class Take(ClientPacket):
+    __packet_key__ = "take"
+
+
+class Confirm(ClientPacket):
+    __packet_key__ = "confirm"
+
+
 # Features
 
 class CardReturn(ClientPacket):

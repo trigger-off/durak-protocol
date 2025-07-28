@@ -63,5 +63,10 @@ class DayBonus(ServerPacket):
     k: int
 
 
+class NotEnoughCoins(ServerPacket):
+    __packet_key__ = "not_enough_coins"
+    feature: str | None = None
+
+
 class BuyPointsSuccess(ServerPacket):
     __packet_key__ = "buy_points_success"

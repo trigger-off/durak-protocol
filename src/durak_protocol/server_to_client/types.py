@@ -139,3 +139,8 @@ class PremiumPrice(BaseModel):
     price: int
     quantity: int
     id: str
+
+
+class Shirt(BaseModel):
+    id: str
+    lvl: int

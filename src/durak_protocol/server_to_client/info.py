@@ -26,6 +26,6 @@ class Message(ServerPacket):
     text: dict[str, str]
 
 
-class FunctionIsUnavailable(ServerPacket):
+class FunctionalIsUnavailable(ServerPacket):
     __packet_key__ = "functional_is_unavailable"
     until: datetime | str
