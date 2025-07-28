@@ -1,15 +1,15 @@
 from .packet import *
 from . import (
-    connection,
     account,
+    assets,
     authorization,
+    billing,
     chat,
+    connection,
+    friends,
     game,
     gifts,
-    billing,
     leaderboard,
-    users,
     tournament,
-    assets,
-    friends
+    users
 )

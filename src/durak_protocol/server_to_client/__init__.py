@@ -1,16 +1,18 @@
 from .packet import *
 from . import (
-    consts,
-    types,
-    connection,
-    authorization,
-    info,
     account,
-    billing,
-    game,
     assets,
-    leaderboard,
-    users,
+    authorization,
+    billing,
+    chat,
+    connection,
+    consts,
     friends,
-    tournament
+    game,
+    gifts,
+    info,
+    leaderboard,
+    tournament,
+    types,
+    users
 )
