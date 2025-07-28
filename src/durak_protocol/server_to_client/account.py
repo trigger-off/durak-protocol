@@ -6,7 +6,7 @@ from . import ServerPacket
 class UserUpdate(ServerPacket):
     __packet_key__ = "uu"
     k: str
-    v: Any
+    v: Any | None = None
 
 
 class DeleteNotice(ServerPacket):
