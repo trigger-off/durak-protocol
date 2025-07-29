@@ -235,10 +235,11 @@ class GameOver(ServerPacket):
 
 class PlayerOn(ServerPacket):
     __packet_key__ = "p_on"
-
+    id: int
 
 class PlayerOff(ServerPacket):
     __packet_key__ = "p_off"
+    id: int
 
 
 class BtnReadyOff(ServerPacket):
