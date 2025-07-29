@@ -55,7 +55,7 @@ class GetRustorePurchaseIds(ClientPacket):
 
 
 class GetPointsPrice(ClientPacket):
-    __packet_key__ = "get_point_price"
+    __packet_key__ = "get_points_price"
 
 
 class GetValidateRW(ClientPacket):
