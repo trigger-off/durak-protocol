@@ -33,6 +33,12 @@ class UsersByTokens(ServerPacket):
     users: dict[str, types.UserData]
 
 
+class AppleSignIn(ServerPacket):
+    __packet_key__ = "apple_sign_in"
+    id_token: str
+    name: str
+
+
 class HuaweiNeedRegistration(ServerPacket):
     __packet_key__ = "huawei_need_registration"
     id_token: str
@@ -81,3 +87,7 @@ class DurakGoogleRegisterSuccess(ServerPacket):
 
 class VkAuthSuccess(ServerPacket):
     __packet_key__ = "vk_auth_success"
+
+
+class AppleSignInSuccess(ServerPacket):
+    __packet_key__ = "apple_sign_in_success"
