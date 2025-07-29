@@ -87,25 +87,25 @@ class Turn(ServerPacket):
 
 class SwapCard(ServerPacket):
     __packet_key__ = "s"
-    id: int
+    id: int | None = None
     c: str = Field(..., title="Swap Card")
 
 
 class ThrowCard(ServerPacket):
     __packet_key__ = "t"
-    id: int
+    id: int | None = None
     c: str = Field(..., title="Throw Card")
 
 
 class FollowCard(ServerPacket):
     __packet_key__ = "f"
-    id: int
+    id: int | None = None
     c: str = Field(..., title="Follow Card")
 
 
 class BeatCard(ServerPacket):
     __packet_key__ = "b"
-    id: int
+    id: int | None = None
     c: str = Field(..., title="Beaten Card")
     b: str = Field(..., title="Beating Card")
 
@@ -115,12 +115,12 @@ class ReturnThrowCard(ThrowCard):
     e: int | None = None
 
 
-class ReturnFollowCard(ThrowCard):
+class ReturnFollowCard(FollowCard):
     __packet_key__ = "rf"
     e: int | None = None
 
 
-class ReturnSwapCard(ThrowCard):
+class ReturnSwapCard(SwapCard):
     __packet_key__ = "rs"
     e: int | None = None
 
