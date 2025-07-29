@@ -70,6 +70,7 @@ class PlayerPos(ServerPacket):
 class PlayerSwapRequest(ServerPacket):
     __packet_key__ = "player_swap_request"
     id: int
+    name: str
 
 
 class Order(ServerPacket):
