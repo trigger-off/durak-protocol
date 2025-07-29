@@ -20,7 +20,7 @@ class UserInfo(ServerPacket):
     t_silver: int
     t_gold: int
     wins: int
-    wins_s: int
+    wins_s: int | None = None
     points_win: int
     points_win_s: int | None = None
     score: int
