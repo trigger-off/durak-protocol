@@ -29,5 +29,5 @@ ALL_UU_KEYS = (
     "score",
     "score_s",
     "dtp",
-    "dtpf"
+    "dtpf",
 )

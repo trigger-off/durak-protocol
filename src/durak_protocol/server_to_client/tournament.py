@@ -27,7 +27,7 @@ class TourScore(ServerPacket):
 
 class TourHall(ServerPacket):
     __packet_key__ = "tour_hall"
-    type: Literal["gold","silver","bronze"]
+    type: Literal["gold", "silver", "bronze"]
     desc: dict
     items: dict
 

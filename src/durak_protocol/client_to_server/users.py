@@ -21,3 +21,7 @@ class SaveNote(ClientPacket):
 class Complaint(ClientPacket):
     __packet_key__ = "complaint"
     id: int | None = None
+
+
+class GetNotes(ClientPacket):
+    __packet_key__ = "get_notes"

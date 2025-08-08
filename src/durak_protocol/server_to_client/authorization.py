@@ -7,9 +7,11 @@ class Authorized(ServerPacket):
     __packet_key__ = "authorized"
     id: int
 
+
 class SetToken(ServerPacket):
     __packet_key__ = "set_token"
     token: str
+
 
 class Captcha(ServerPacket):
     __packet_key__ = "captcha"
@@ -21,6 +23,7 @@ class GetIntegrityToken(ServerPacket):
     request_hash: str
     rt: Literal["st", "cl"] | None = None
 
+
 class TokenFCM(ServerPacket):
     __packet_key__ = "token"
     uid: str
@@ -31,6 +34,12 @@ class TokenFCM(ServerPacket):
 class UsersByTokens(ServerPacket):
     __packet_key__ = "users_by_tokens"
     users: dict[str, types.UserData]
+
+
+class AppleSignIn(ServerPacket):
+    __packet_key__ = "apple_sign_in"
+    id_token: str
+    name: str
 
 
 class HuaweiNeedRegistration(ServerPacket):
@@ -76,8 +85,14 @@ class HuaweiAuthSuccess(ServerPacket):
 class DurakGoogleAuthSuccess(ServerPacket):
     __packet_key__ = "durak_google_auth_success"
 
+
 class DurakGoogleRegisterSuccess(ServerPacket):
     __packet_key__ = "durak_google_register_success"
 
+
 class VkAuthSuccess(ServerPacket):
     __packet_key__ = "vk_auth_success"
+
+
+class AppleSignInSuccess(ServerPacket):
+    __packet_key__ = "apple_sign_in_success"

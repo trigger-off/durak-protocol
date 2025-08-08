@@ -137,6 +137,7 @@ class Confirm(ClientPacket):
 
 # Features
 
+
 class CardReturn(ClientPacket):
     __packet_key__ = "card_return"
 

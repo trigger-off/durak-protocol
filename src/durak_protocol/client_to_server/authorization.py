@@ -43,6 +43,7 @@ class AppleRegisterConfirm(ClientPacket):
     __packet_key__ = "register_confirm"
     register_code: str
 
+
 class HuaweiRegistration(ClientPacket):
     __packet_key__ = "huawei_register"
     id_token: str

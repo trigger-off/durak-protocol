@@ -14,5 +14,5 @@ from . import (
     leaderboard,
     tournament,
     types,
-    users
+    users,
 )

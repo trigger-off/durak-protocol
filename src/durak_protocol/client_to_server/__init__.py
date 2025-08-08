@@ -11,5 +11,5 @@ from . import (
     gifts,
     leaderboard,
     tournament,
-    users
+    users,
 )

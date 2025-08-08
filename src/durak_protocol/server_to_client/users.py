@@ -31,3 +31,8 @@ class UserInfo(ServerPacket):
     achieve: str | None = None
     achieves: list[str]
     coll: dict[str, types.CollectionAsset]
+
+
+class Notes(ServerPacket):
+    __packet_key__ = "notes"
+    notes: list
