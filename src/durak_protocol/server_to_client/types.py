@@ -5,37 +5,37 @@ from pydantic import BaseModel, Field
 
 
 class UserData(BaseModel):
-    name: str
+    name: str | None = None
     avatar: str | None = None
-    rid: str
-    news: bool
-    pw: int
-    friends_count: int
-    new_msg: bool
-    assets: list[int]
-    assel: list[int]
+    rid: str | None = None
+    news: bool | None = None
+    pw: int | None = None
+    friends_count: int | None = None
+    new_msg: bool | None = None
+    assets: list[int] | None = None
+    assel: list[int] | None = None
     frame: str | None = None
     smile: str | None = None
     shirt: str | None = None
-    ach: list[int]
-    achc: int
-    achsel: list[int]
+    ach: list[int] | None = None
+    achc: int | None = None
+    achsel: list[int] | None = None
     achieve: str | None = None
-    t_tour_stage: int
-    t_player_status: int
-    t_bronze: int
-    t_silver: int
-    t_gold: int
-    coins: int
-    wins: int
+    t_tour_stage: int | None = None
+    t_player_status: int | None = None
+    t_bronze: int | None = None
+    t_silver: int | None = None
+    t_gold: int | None = None
+    coins: int | None = None
+    wins: int | None = None
     wins_s: int | None = None
-    points_win: int
+    points_win: int | None = None
     points_win_s: int | None = None
-    points: int
-    score: int
+    points: int | None = None
+    score: int | None = None
     score_s: int | None = None
-    dtp: datetime
-    dtfp: datetime
+    dtp: datetime | None = None
+    dtfp: datetime | None = None
 
 
 class UserFind(BaseModel):
@@ -128,6 +128,7 @@ class CollectionAsset(BaseModel):
     group: ASSET_GROUP_TYPE
     items: dict[str, int]
     ass: Asset | None = None
+
 
 class PointsPrice(BaseModel):
     price: int

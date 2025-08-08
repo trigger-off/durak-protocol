@@ -1,4 +1,5 @@
 from enum import Enum, auto
+
 # noinspection PyUnresolvedReferences
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from typing import ClassVar, Type, TypeVar, Unpack
@@ -19,7 +20,9 @@ class BasePacket(BaseModel):
     __packet_key__: ClassVar[str]
     __direction__: ClassVar[Direction]
 
-    model_config = ConfigDict(extra="forbid", validate_by_name=True)  # Запрещаем лишние поля
+    model_config = ConfigDict(
+        extra="forbid", validate_by_name=True
+    )  # Запрещаем лишние поля
 
     def __init_subclass__(cls, **kwargs: Unpack[ConfigDict]):
         super().__init_subclass__(**kwargs)

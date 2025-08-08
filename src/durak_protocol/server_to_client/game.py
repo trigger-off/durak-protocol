@@ -153,7 +153,7 @@ class CheaterSwapCard(ThrowCard):
 
 class Table(ServerPacket):
     __packet_key__ = "table"
-    model_config = ConfigDict(extra='allow')
+    model_config = ConfigDict(extra="allow")
 
 
 class Hands(ServerPacket):
@@ -234,9 +234,11 @@ class GameOver(ServerPacket):
     __packet_key__ = "game_over"
     players: list[int] | None = None
 
+
 class PlayerOn(ServerPacket):
     __packet_key__ = "p_on"
     id: int
+
 
 class PlayerOff(ServerPacket):
     __packet_key__ = "p_off"
@@ -249,6 +251,7 @@ class BtnReadyOff(ServerPacket):
 
 class BtnReadyOn(ServerPacket):
     __packet_key__ = "btn_ready_on"
+
 
 class GamePublic(ServerPacket):
     __packet_key__ = "game_public"

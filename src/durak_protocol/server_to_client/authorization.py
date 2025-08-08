@@ -7,9 +7,11 @@ class Authorized(ServerPacket):
     __packet_key__ = "authorized"
     id: int
 
+
 class SetToken(ServerPacket):
     __packet_key__ = "set_token"
     token: str
+
 
 class Captcha(ServerPacket):
     __packet_key__ = "captcha"
@@ -20,6 +22,7 @@ class GetIntegrityToken(ServerPacket):
     __packet_key__ = "get_integrity_token"
     request_hash: str
     rt: Literal["st", "cl"] | None = None
+
 
 class TokenFCM(ServerPacket):
     __packet_key__ = "token"
@@ -82,8 +85,10 @@ class HuaweiAuthSuccess(ServerPacket):
 class DurakGoogleAuthSuccess(ServerPacket):
     __packet_key__ = "durak_google_auth_success"
 
+
 class DurakGoogleRegisterSuccess(ServerPacket):
     __packet_key__ = "durak_google_register_success"
+
 
 class VkAuthSuccess(ServerPacket):
     __packet_key__ = "vk_auth_success"
